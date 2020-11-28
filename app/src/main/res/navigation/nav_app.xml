@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_calculator"
+    app:startDestination="@id/formFragment">
+
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.santhosh.assignment.ui.FormFragment"
+        tools:layout="@layout/fragment_form">
+        <action
+            android:id="@+id/step_age_detail"
+            app:destination="@id/ageDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ageDetailFragment"
+        android:name="com.santhosh.assignment.ui.AgeDetailFragment"
+        tools:layout="@layout/fragment_age_detail" >
+        <argument
+            android:name="info"
+            app:argType="com.santhosh.assignment.model.PersonalInfo"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SanthoshAssignment</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="next">Next</string>
+    <string name="detail_first_name">First name: %s</string>
+    <string name="detail_last_name">Last name: %s</string>
+    <string name="detail_dob">Age: %1s years, %2s month(s), %3s day(s)</string>
+</resources>
