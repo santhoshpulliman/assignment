@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -9,7 +10,7 @@
             type="com.santhosh.assignment.model.PersonalInfo" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/margin_medium">
@@ -21,9 +22,12 @@
             android:text="@{String.format(@string/detail_first_name, info.firstName)}"
             android:textColor="@color/purple_700"
             android:textSize="@dimen/text_size_16"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4"
             tools:text="First name: Santhosh" />
 
         <TextView
@@ -41,15 +45,26 @@
 
         <TextView
             android:id="@+id/tv_dob"
+            age="@{info.dateOfBirth}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             android:textColor="@color/purple_700"
             android:textSize="@dimen/text_size_16"
-            age="@{info.dateOfBirth}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_last_name"
             tools:text="Age: 30 years, 2 months, 12 days" />
+
+        <Button
+            android:id="@+id/btn_go_back"
+            style="@style/RegularButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:text="@string/go_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dob" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

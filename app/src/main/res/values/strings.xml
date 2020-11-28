@@ -7,4 +7,5 @@
     <string name="detail_first_name">First name: %s</string>
     <string name="detail_last_name">Last name: %s</string>
     <string name="detail_dob">Age: %1s years, %2s month(s), %3s day(s)</string>
+    <string name="go_back">Go back</string>
 </resources>

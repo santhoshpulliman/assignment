@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.santhosh.assignment.R
 import com.santhosh.assignment.databinding.FragmentAgeDetailBinding
@@ -25,6 +26,9 @@ class AgeDetailFragment : Fragment() {
         binding = DataBindingUtil.bind(view)!!
         binding.info = args.info
         activity?.title = "Age detail"
+        binding.btnGoBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
         return view
     }
 
